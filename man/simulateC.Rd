@@ -4,12 +4,12 @@
 \alias{simulateC}
 \title{A function for simulation of generalized birthday problem}
 \usage{
-simulateC(k = 2, roomSize = 23, replicate = 1e+05)
+simulateC(k = 2, room = 23, replicate = 1e+05)
 }
 \arguments{
 \item{k}{Integer. k persons shared birthday.}
 
-\item{roomSize}{Integer. Room size to be tested.}
+\item{room}{Integer. Room size to be tested.}
 
 \item{repliate}{Integer. Replicate size.}
 }
