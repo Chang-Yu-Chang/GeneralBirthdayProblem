@@ -1,6 +1,6 @@
 #' Finding the target room size in generalized birthday problem
 #'
-#' @name gbd
+#' @name gbp
 #' @param k Integer. k persons shared birthday.
 #' @param p Integer. Room size to be tested.
 #' @param B_l Lower bound of tested room size.
@@ -12,20 +12,20 @@
 #' @examples
 #'# Simple example with k=2
 #'system.time({
-#'y <- gbd(k=2, p=0.5)
+#'y <- gbp(k=2, p=0.5)
 #'})
 #'y
 #'
 #'# You can also track the simulation process
-#'y <- gbd(k=3, p=0.5, print=TRUE)
+#'y <- gbp(k=3, p=0.5, print=TRUE)
 #'
 #'# Or output the tested room sizes
-#'y <- gbd(k=3, p=0.5, recor=TRUE)
+#'y <- gbp(k=3, p=0.5, recor=TRUE)
 #'y
 
 library(Rcpp)
 
-gbd <- function(k=3, p=.5, B_l=1000, B_u=20000, threshold=.001, print=FALSE, recor=FALSE) {
+gbp <- function(k=3, p=.5, B_l=1000, B_u=20000, threshold=.001, print=FALSE, recor=FALSE) {
   replicate <- B_l             # For one room size, do 1000 replciates
   i <- k                       # Tested room size; start from k persons in a room
   x <- 1                       # Counter for while loop
