@@ -5,7 +5,7 @@ rcpp_hello_world <- function() {
     .Call(`_GeneralBirthdayProblem_rcpp_hello_world`)
 }
 
-simulateC <- function(k, roomSize, replicate) {
-    .Call(`_GeneralBirthdayProblem_simulateC`, k, roomSize, replicate)
+simulateC <- function(k, room, replicate) {
+    .Call(`_GeneralBirthdayProblem_simulateC`, k, room, replicate)
 }
 

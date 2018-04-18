@@ -16,15 +16,15 @@ BEGIN_RCPP
 END_RCPP
 }
 // simulateC
-float simulateC(int k, int roomSize, int replicate);
-RcppExport SEXP _GeneralBirthdayProblem_simulateC(SEXP kSEXP, SEXP roomSizeSEXP, SEXP replicateSEXP) {
+float simulateC(int k, int room, int replicate);
+RcppExport SEXP _GeneralBirthdayProblem_simulateC(SEXP kSEXP, SEXP roomSEXP, SEXP replicateSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type k(kSEXP);
-    Rcpp::traits::input_parameter< int >::type roomSize(roomSizeSEXP);
+    Rcpp::traits::input_parameter< int >::type room(roomSEXP);
     Rcpp::traits::input_parameter< int >::type replicate(replicateSEXP);
-    rcpp_result_gen = Rcpp::wrap(simulateC(k, roomSize, replicate));
+    rcpp_result_gen = Rcpp::wrap(simulateC(k, room, replicate));
     return rcpp_result_gen;
 END_RCPP
 }
