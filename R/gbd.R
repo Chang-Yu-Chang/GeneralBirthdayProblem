@@ -39,7 +39,7 @@ gbd <- function(k=3, p=.5, B_l=1000, B_u=20000, threshold=.001, print=FALSE, rec
     if (print == TRUE) cat(paste0('L', L, '\tR', R, '\t'))
 
     # Tested room size
-    i <- c((L+R)/2)
+    i <- ceiling((L+R)/2)
 
     # Run simulation in C++
     result <- simulateC(k=k, room=i, replicate = replicate)
